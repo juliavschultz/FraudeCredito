@@ -20,16 +20,13 @@ arquivo = pd.read_csv('Creditofraude.csv', sep=',')
 #classificação de transação legítima==0 e fraudulenta==1
 nomesClassesED=['LEGÍTIMA', 'FRAUDE']
 
-#--------AMOSTRA
-#amostra = arquivo.sample(n=2000, random_state=20)
-#amostra.describe()
-
 #--------SEPARANDO COLUNAS
 
-
-
-dataset_features = arquivo.iloc[:,:2]
-dataset_classes = arquivo.iloc[:,3]
+colunas = arquivo.columns.to_list()
+nomesColunas = colunas [1:2]
+nomescol = colunas [3]
+dataset_features = arquivo[nomesColunas]
+dataset_classes = arquivo[nomescol]
 
 #print(set(dataset_classes))
 #print(set(dataset_features))
