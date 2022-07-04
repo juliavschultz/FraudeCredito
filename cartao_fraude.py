@@ -29,7 +29,7 @@ nomesClassesED=['LEGÍTIMA', 'FRAUDE']
 
 
 dataset_features = arquivo.iloc[:,:2]
-dataset_classes = arquivo.iloc[3]
+dataset_classes = arquivo.iloc[:,3]
 
 #print(set(dataset_classes))
 #print(set(dataset_features))
