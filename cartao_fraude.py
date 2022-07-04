@@ -23,8 +23,8 @@ nomesClassesED=['LEGÍTIMA', 'FRAUDE']
 #--------SEPARANDO COLUNAS
 
 colunas = arquivo.columns.to_list()
-nomesColunas = colunas [1:2]
-nomescol = colunas [3]
+nomesColunas = colunas [0:2]
+nomescol = colunas [2]
 dataset_features = arquivo[nomesColunas]
 dataset_classes = arquivo[nomescol]
 
